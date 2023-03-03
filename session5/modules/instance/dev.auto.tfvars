@@ -1,0 +1,6 @@
+instance_ami = "ami-00569e54da628d17c"
+availability_zone = "us-west-1c"
+security_group_name = "webserve-sg"
+security_group_description = "instance security group"
+monitoring = "false"
+namespace = "webserver"

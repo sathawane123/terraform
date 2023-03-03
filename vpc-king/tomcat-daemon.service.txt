@@ -1,0 +1,25 @@
+[Unit]
+Description=tomcat daemon
+After=network.target
+
+[Service]
+Type=forking
+# the specific user that our service will run as
+User=root
+Group=root
+RuntimeDirectory=tomcat
+WorkingDirectory=/opt/tomcat
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/opt/tomcat/bin/shutdown.sh
+KillMode=none
+
+[Install]
+WantedBy=multi-user.target
+
+#!/bin/bash
+sudo yum install java-openjdk -y
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.tar.gz
+sudo curl -O https://studentwar-new.s3.ap-south-1.amazonaws.com/student.war
+https://tomcat-daemon.s3.us-east-2.amazonaws.com/tomcat-daemon.service
+sudo tar -xvzf apache-tomcat-9.0.70.tar.gz
+sudo cd /opt/tomcat/webapps

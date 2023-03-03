@@ -1,0 +1,42 @@
+#FROM centos:7
+#RUN yum update -y
+#RUN yum install httpd -y
+#RUN echo "<h1>jubershik</h1>" >> /var/www/html/index.html
+#EXPOSE 80
+#CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
+
+
+
+#FROM ubuntu
+#RUN apt update
+#RUN apt install apache2 -y
+#RUN echo "<h1>raja</h1>" >> /var/www/html/index.html
+#EXPOSE 83
+#CMD [“apache2ctl”, “-D”, “FOREGROUND”]
+
+
+
+
+#FROM centos:7
+#RUN yum update -y
+#RUN yum install wget -y
+#RUN yum install unzip -y
+#RUN yum install httpd -y
+#RUN rm -rf /var/www/html/index.html
+#RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page287/cycle.zip
+#RUN unzip cycle.zip
+#RUN mv html/* /var/www/html/.
+#EXPOSE 80
+#CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
+
+
+#FROM centos:7
+#RUN yum update -y
+#RUN yum install java-openjdk -y
+#RUN java -version
+#RUN mkdir /opt/tomcat
+#WORKDIR /opt/tomcat
+#RUN curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.72/bin/apache-tomcat-9.0.72.tar.gz
+#RUN tar xvfz apache*.tar.gz
+#RUN mv apache-tomcat-9.0.72/* /opt/tomcat/.
+                                                                                                        
